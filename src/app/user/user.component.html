@@ -1,0 +1,120 @@
+<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Libre+Baskerville|Lora|Playfair+Display|Source+Serif+Pro&display=swap"
+      rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<div class="container headings">
+  <div class="col-md-12 ">
+    <h3><span id="heading1">Github </span><span id="heading2">Profile Finder</span></h3>
+  </div>
+</div>
+
+<div class="container"  class="holddata">
+
+  <a></a>
+  <div class="row">
+
+    <div class=" search col-md-12">
+      <a href="{{url}}"><img src="https://img.icons8.com/metro/26/000000/github.png" alt="github"></a>
+      <form class="form form-inline form-multiline" (ngSubmit)="getUser(username.value,forms)" #forms="ngForm" ngForm  role="form">
+
+
+
+        <div class="form-group searches">
+
+          <input class="form-control" required  id="searchbar"  placeholder="What is your Github Username?"  #username  type="text">
+
+          <button #submit class="form-control btn btn-dark" id="searchbutton"  type="submit"><span id="searchicona"><i class="material-icons" id="searchicon">search</i></span></button>
+
+        </div>
+
+
+        <div class="form-group searching">
+<!--          <button class="form-control btn btn-dark" id="searchbutton"  type="submit">Search<span><i class="material-icons" id="searchicon">search</i></span></button>-->
+        </div>
+
+
+
+<!--        <div class="warning" *ngIf="!username.valid && (username.touched || username.untouched) && forms.submitted">-->
+<!--          <h2>Enter a name</h2>-->
+<!--        </div>-->
+
+      </form>
+
+
+<!--      <form  class="form form-inline" (ngSubmit)="getUser(username.value)">-->
+<!--        <div class="search form-group">-->
+
+<!--<label for="searchbar">-->
+<!--  What is your Github Username?-->
+<!--</label>-->
+<!--            <input class="form-control" id="searchbar" #username type="text">-->
+<!--        </div>-->
+<!--          <div class="searching form-group">-->
+<!--            <label for="searchbar"><span><i class="material-icons">search</i></span></label>-->
+<!--            <button class="form-control btn btn-dark" id="searchbutton"  type="submit">Search<span><i class="material-icons" id="searchicon">search</i></span></button>-->
+<!--          </div>-->
+
+
+
+<!--        <p>Red</p>-->
+
+<!--&lt;!&ndash;        <span><input class="form-control material-icons" type="submit"  class="btn btn-dark" value="Yeet"><span><i class="material-icons">search</i></span></span>&ndash;&gt;-->
+
+
+<!--      </form>-->
+    </div>
+
+    <div class="userdetails" *ngIf="forms.submitted">
+    <div class="col-md-12" >
+      <h3><span>Username: </span>{{login}}</h3>
+
+    </div>
+    <div class="col-md-12">
+      <p><span>Bio :</span>{{bio}}</p>
+    </div>
+    <div class="col-md-12">
+      <p><span>Public repos :</span>{{repos}}</p>
+    </div>
+    <div class="col-md-12">
+      <p><span id="followers">Followers |</span>{{followers}}<span id="following">Following |</span>{{following}}</p>
+      <br>
+      <a href="{{url}}">Here is my Github profile</a>
+    </div>
+
+
+  </div>
+  </div>
+
+
+
+
+
+
+
+<div>
+
+</div>
+
+
+    </div>
+
+
+
+<!--    <div class="row">-->
+<!--      <div class="col-md-12" id="userdetails">-->
+<!--        &lt;!&ndash;        <p>profile</p>&ndash;&gt;-->
+<!--        &lt;!&ndash;        <p>{{profile}}</p>&ndash;&gt;-->
+<!--        <p><span>Username: </span>{{login}}<br></p>-->
+<!--        <p><span>Id :</span>{{bio}}</p><br>-->
+<!--        <p><span>Id :</span>{{id}}</p><br>-->
+<!--        <p><span>Public repos :</span>{{repos}}</p><br>-->
+<!--        <p><span>Followers :</span>{{followers}}</p><br>-->
+<!--        <p><span>Following :</span>{{following}}</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="container"></div>-->
+
+<!--</div>-->
+
+<router-outlet></router-outlet>
